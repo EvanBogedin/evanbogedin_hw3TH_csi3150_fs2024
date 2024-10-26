@@ -1,0 +1,410 @@
+/*
+
+all images from: https://science.nasa.gov/mars/resources/?types=images&content_list=true
+
+*/
+* {
+  font-family: "Expletus Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  --accent-color: rgb(201, 107, 31);
+}
+
+::selection {
+  /*makes highlighted text orange*/
+  background-color: rgba(196, 71, 26, 0.76);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 20px;
+  background-blend-mode: multiply;
+  background-color: #8b8b8b;
+}
+
+#accent-headers {
+  color: var(--accent-color);
+}
+
+#white-headers {
+  color: #ffffff;
+}
+
+p {
+  color: #d1d1d1;
+}
+.icon {
+  margin: 0;
+  width: 100px;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+svg:hover > * {
+  transition: 0.3s;
+  fill: #ffffff;
+}
+
+button {
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  border-color: var(--accent-color);
+  width: 100px;
+  height: 35px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.3s;
+  color: #ffffff;
+}
+
+/*------*/
+/*Header*/
+/*------*/
+header {
+  background-image: url("../assets/images/Mars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 20px;
+  color: #ffffff;
+}
+
+header > h1 {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-size: 200px;
+  color: rgb(0, 0, 0);
+  /*text-shadow: 0 0 10px rgb(0, 0, 0);*/
+}
+
+header > h2 {
+  margin: 0 0 0 0;
+}
+
+/*-----*/
+/*intro*/
+/*-----*/
+
+.intro-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-image: url("../assets/images/37600_PIA17944_Mcam-SOL538-WB.jpg");
+  background-size: 2048px;
+}
+
+.intro-section > .right {
+  width: 30%;
+  font-size: 20px;
+}
+
+.intro-section > .left {
+  width: 30%;
+  font-size: 30px;
+}
+
+/*----------*/
+/*Activities*/
+/*----------*/
+
+.activities-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-image: url(../assets/images/45016_PIA23974-View_from_Top_of_Pediment-main.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 0; /*puts the background-imag behind the activity images*/
+}
+
+.activities-section > h2 {
+  width: 50%;
+  font-size: 40px;
+}
+
+.activities-section > .activities-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.activities-section > .activities-wrapper > .activity1,
+.activity2,
+.activity3 {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  width: 350px;
+  height: 512px;
+  overflow: hidden;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.753);
+  background-position: center;
+}
+
+.activity1 {
+  background-image: url("../assets/images/Gediz Vallis.png");
+}
+
+.activity2 {
+  background-image: url("../assets/images/Marker\ Band\ Valley.png");
+}
+
+.activity3 {
+  background-image: url("../assets/images/Ingenuity\ at\ 'Valinor\ Hills'.png");
+}
+
+.gradient {
+  /*double transperent to make it fade faster*/
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    var(--accent-color)
+  );
+  width: 100%;
+  height: 100%;
+  transform: translate(0 10000px);
+  cursor: pointer;
+}
+
+.gradient:hover {
+  transition: 0.3s;
+  color: #ffffff;
+}
+
+.gradient:hover > .activity-title-wrapper > svg > * {
+  transition: 0.3s;
+  fill: #ffffff;
+}
+
+.activity-title-wrapper {
+  margin-top: 362px;
+  display: flex;
+  flex-direction: column;
+
+  position: static;
+  width: 100%;
+}
+
+.explore {
+  width: 45%;
+  text-align: center;
+}
+
+.activity-title-wrapper > h3 {
+  margin-left: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 30px;
+}
+
+/*---------------*/
+/*Recommendations*/
+/*---------------*/
+
+.recommendations-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-image: url(../assets/images/39637_msl-rover-wheel-damage-pia21486.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.recommendations-section > .left > h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.recommendations-section > .left {
+  width: 45%;
+}
+
+.recommendations-section > .right {
+  width: 45%;
+}
+
+/*-----*/
+/*Stats*/
+/*-----*/
+
+.stats-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-image: URL(../assets/images/25512_PIA24180_v2.png);
+  background-size: cover;
+  padding: 100px;
+}
+
+.stats-section > .stat {
+  background-color: #000;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.stats-section > .stat > h3 {
+  color: var(--accent-color);
+  font-size: 50px;
+  margin: 0;
+}
+
+.stats-section > .stat > p {
+  color: rgb(255, 255, 255);
+}
+
+/*------*/
+/*Author*/
+/*------*/
+
+.author-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url(../assets/images/46162_1-PIA24622-Curiosity_Spots_Clouds_over_Mont_Mercou.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.author-section > img {
+  margin-top: 20px;
+  width: 256px;
+  border-radius: 50%;
+}
+
+.author-section > p {
+  width: 512px;
+  text-align: center;
+}
+
+/*-------*/
+/*Gallery*/
+/*-------*/
+
+.gallery-section {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.gallery-section > div {
+  width: 25%;
+  height: 512px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/*------*/
+/*Footer*/
+/*------*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0;
+  background-image: url(../assets/images/48717_PIA26080-NaturalColor-half.jpg);
+  background-size: fill;
+}
+
+footer > .left > h2 {
+  color: var(--accent-color);
+  font-size: 50px;
+}
+
+footer > .left > p {
+  font-size: 12px;
+}
+
+.social-media-icon-wrapper > svg > * {
+  /* the * is becuase some of the svgs have multiple pieces */
+  fill: var(--accent-color);
+}
+
+.social-media-icon-wrapper > svg:hover > * {
+  /* hover over svg instead of * for same reason as above*/
+  fill: #ffffff;
+}
+
+footer > .left {
+  padding: 75px;
+  width: 45%;
+}
+
+footer > .left > h2 {
+  margin: 0;
+}
+footer > .right {
+  padding: 75px;
+  width: 45%;
+}
+
+footer > .right > form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+footer > .right > form > input {
+  width: 100%;
+  background-color: #00000000;
+  border-color: #ffffff6e;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer > .right > form > input:focus {
+  transition: 0.3s;
+  outline-color: var(--accent-color);
+}
+
+footer > .right > form > textarea {
+  width: 100%;
+  background-color: #00000000;
+  border-color: #ffffff6e;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer > .right > form > textarea:focus {
+  transition: 0.3s;
+  outline-color: var(--accent-color);
+}
