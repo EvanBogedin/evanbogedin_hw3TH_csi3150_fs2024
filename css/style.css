@@ -6,7 +6,6 @@ all images from: https://science.nasa.gov/mars/resources/?types=images&content_l
 * {
   font-family: "Expletus Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
   --accent-color: rgb(201, 107, 31);
 }
@@ -23,6 +22,9 @@ body {
 
 section {
   padding: 20px;
+
+  /*darkens the backgorund image by multiplying it by a darker color.
+   I'm lazy and don't feel like adding a transperant div over every section*/
   background-blend-mode: multiply;
   background-color: #8b8b8b;
 }
@@ -333,6 +335,10 @@ footer {
   padding: 0;
   background-image: url(../assets/images/48717_PIA26080-NaturalColor-half.jpg);
   background-size: fill;
+
+  /*darkens the backgorund image by multiplying it by a darker color*/
+  background-blend-mode: multiply;
+  background-color: #8b8b8b;
 }
 
 footer > .left > h2 {
