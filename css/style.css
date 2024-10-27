@@ -27,11 +27,11 @@ section {
   background-color: #8b8b8b;
 }
 
-#accent-headers {
+.accent-headers {
   color: var(--accent-color);
 }
 
-#white-headers {
+.white-headers {
   color: #ffffff;
 }
 
